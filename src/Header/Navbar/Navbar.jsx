@@ -1,11 +1,13 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import Logo from "./Logo";
 
 const Navbar = () => {
   return (
     <div>
-      <nav>
-        <ul>
+      <nav className="flex justify-between items-center px-5 py-10">
+        <Logo></Logo>
+        <ul className="flex gap-12 text-lg font-semibold">
           <li>
             <NavLink
               to="/"
