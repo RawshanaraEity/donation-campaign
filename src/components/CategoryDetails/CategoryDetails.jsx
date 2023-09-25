@@ -21,7 +21,7 @@ const CategoryDetails = () => {
 
    }, [idInt,categoryData])
 
-   console.log(categoryInfo)
+//    console.log(categoryInfo)
 
     return (
         <div className='py-5'>

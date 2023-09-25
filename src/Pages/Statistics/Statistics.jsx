@@ -1,9 +1,11 @@
-import React from 'react';
+
+import PiChart from "./PieChart";
 
 const Statistics = () => {
+
     return (
-        <div>
-           statistics 
+        <div className="flex justify-center items-center"> 
+        <PiChart></PiChart>
         </div>
     );
 };
