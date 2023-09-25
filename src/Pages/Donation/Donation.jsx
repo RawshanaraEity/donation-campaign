@@ -6,6 +6,7 @@ const Donation = () => {
 
     const [donation, setDonation] = useState([]);
     const [noDataFound, setNoDataFound] = useState(false);
+    const [isShow, setIsShow] = useState(false)
 
     useEffect(() =>{
         const donationItems = JSON.parse(localStorage.getItem('donations'))
@@ -21,15 +22,25 @@ const Donation = () => {
 
     return (
         <div>
-            <div>
+            <div className="pb-10">
                 {
                  noDataFound ?  <p className="flex justify-center text-lg items-center h-[80vh]"> {noDataFound} </p> 
                  : 
+                 <div>
                  <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                     {
-                        donation.map(data => <DonationCard key={data.id} data={data}></DonationCard>)
+                      isShow?  donation.map(data => <DonationCard key={data.id} data={data}></DonationCard>)
+                      : donation.slice(0,4).map(data => <DonationCard key={data.id} data={data}></DonationCard>)
+                    }
+                    </div>
+                    {
+                    donation.length > 4 && <button onClick={() => setIsShow(!isShow)} className="bg-green-600 rounded-md font-medium text-xl py-2 text-white mx-auto px-5  mt-5 block">{isShow ? 'See Less' : 'See All'}</button> 
                     }
                  </div>
+
+                
+                     
+                
 
 
                 }

@@ -4,7 +4,7 @@ import swal from "sweetalert";
 
 const CategoryDetailsCard = ({categoryInfo}) => {
 
-    const {picture, title, text_btn_bg_color, description, price} = categoryInfo || {};
+    const {id,picture, title, text_btn_bg_color, description, price} = categoryInfo || {};
 
 
     const handleAddToDonation = () =>{
@@ -19,9 +19,16 @@ const CategoryDetailsCard = ({categoryInfo}) => {
             swal("Good job!", "You Donate Successfully", "success");
         }
         else{
-            addedDonationItems.push(...donationItems,categoryInfo)
-            localStorage.setItem('donations',JSON.stringify(addedDonationItems))
-            swal("Good job!", "You Donate Successfully", "success");
+            const isExists = donationItems.find(item => item.id === id) 
+            if(!isExists){
+                addedDonationItems.push(...donationItems,categoryInfo)
+                localStorage.setItem('donations',JSON.stringify(addedDonationItems))
+                swal("Good job!", "You Donate Successfully", "success");
+            }
+            else{
+                swal("Sorry", "Already Donate", "error");
+            }
+          
         }
 
     }
