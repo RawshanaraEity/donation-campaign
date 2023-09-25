@@ -31,7 +31,6 @@ const myCreatedRoute = createBrowserRouter([
                 path: '/categories/:id',
                 element: <CategoryDetails></CategoryDetails>,
                 loader: () => fetch('/images.json')
-                
             }
         ]
     }
