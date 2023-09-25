@@ -62,7 +62,7 @@ const renderCustomizedLabel = ({
         cy={200}
         labelLine={false}
         label={renderCustomizedLabel}
-        outerRadius={80}
+        outerRadius={100}
         fill="#8884d8"
         dataKey="value"
       >

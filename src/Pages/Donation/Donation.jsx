@@ -22,7 +22,7 @@ const Donation = () => {
 
     return (
         <div>
-            <div className="pb-10">
+            <div className="pb-10 mx-5">
                 {
                  noDataFound ?  <p className="flex justify-center text-lg items-center h-[80vh]"> {noDataFound} </p> 
                  : 

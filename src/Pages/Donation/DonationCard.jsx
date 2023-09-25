@@ -2,14 +2,14 @@ import React from 'react';
 
 const DonationCard = ({data}) => {
 
-        const {picture, title, text_btn_bg_color, description, price,category,
+        const {picture, title, text_btn_bg_color, price,category,
             category_bg_color,
             card_bg_color}  = data || {}
 
     return (
         <div>
             <div style={{color: text_btn_bg_color}} className="">
-            <div style={{backgroundColor: card_bg_color}} className="relative flex w-full max-w-[48rem] flex-row rounded-xl  shadow-md">
+            <div style={{backgroundColor: card_bg_color}} className="relative w-full max-w-[48rem] flex flex-row rounded-xl  shadow-md">
                  <div className="relative m-0 w-2/5 shrink-0 overflow-hidden rounded-xl rounded-r-none ">
                  <img className="h-full w-full object-cover" src={picture} alt="" />
                  </div>
