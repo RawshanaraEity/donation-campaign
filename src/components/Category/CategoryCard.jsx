@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const CategoryCard = ({ eachCategory }) => {
   const {
@@ -9,17 +10,20 @@ const CategoryCard = ({ eachCategory }) => {
     category_bg_color,
     card_bg_color,
     text_btn_bg_color,
-  } = eachCategory;
+  } = eachCategory || {};
+
+
 
   return (
-    <div style={{backgroundColor: card_bg_color}} >
-      <div className=" flex  flex-col rounded-xl   text-gray-700 shadow-md">
-        <div className="  h-40 overflow-hidden  bg-blue-gray-500 bg-clip-border text-white shadow-lg shadow-blue-gray-500/40">
-          <img src={picture} />
+   <Link to={`categories/${id}`}>
+    <div>
+      <div style={{backgroundColor: card_bg_color}} className=" flex  flex-col rounded-xl shadow-md">
+        <div className="  h-40 overflow-hidden bg-clip-borde shadow-lg shadow-blue-gray-500/40">
+          <img className="w-full" src={picture} />
         </div>
-        <div className="p-6">
+        <div style={{color: text_btn_bg_color}} className="p-6">
 
-        <p className="block rounded-md px-4 py-2 text-base font-medium" style={{backgroundColor: category_bg_color}}>
+        <p className=" w-24 mb-3 rounded-md px-4 py-2 text-base font-medium" style={{backgroundColor: category_bg_color}}>
             {category}
           </p>
           <h5 className="mb-2 block font-sans text-xl font-semibold leading-snug tracking-normal text-blue-gray-900 antialiased">
@@ -29,6 +33,7 @@ const CategoryCard = ({ eachCategory }) => {
         </div>
       </div>
     </div>
+   </Link>
   );
 };
 

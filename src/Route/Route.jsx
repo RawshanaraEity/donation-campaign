@@ -1,10 +1,12 @@
-import React from 'react';
+
 import { createBrowserRouter } from 'react-router-dom';
 import MainLayout from '../Layout/MainLayout';
 import ErrorPage from '../Pages/ErrorPage';
 import Home from '../Pages/Home/Home';
 import Donation from '../Pages/Donation/Donation';
 import Statistics from '../Pages/Statistics/Statistics';
+import CategoryDetails from '../components/CategoryDetails/CategoryDetails';
+
 
 const myCreatedRoute = createBrowserRouter([
     {
@@ -24,6 +26,12 @@ const myCreatedRoute = createBrowserRouter([
             {
                 path: '/statistics',
                 element: <Statistics></Statistics>
+            },
+            {
+                path: '/categories/:id',
+                element: <CategoryDetails></CategoryDetails>,
+                loader: () => fetch('/images.json')
+                
             }
         ]
     }
