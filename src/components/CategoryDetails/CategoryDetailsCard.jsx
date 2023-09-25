@@ -35,12 +35,13 @@ const CategoryDetailsCard = ({categoryInfo}) => {
 
 
     return (
-        <div className='w-2/3 mx-auto'>
-            <div className='relative'>
-                <img className='w-full' src={picture} alt="" />
+        <div className='w-full lg:w-2/3 mx-auto px-5 lg:px-0'>
+            <div className='hero relative'>
+                <img className='w-full z-0' src={picture} alt="" />
                 <a>
-                <button onClick={() => handleAddToDonation()} style={{backgroundColor: text_btn_bg_color}} className='btn text-white font-semibold text-xl absolute bottom-10 left-10 border-none'>Donate ${price}</button>
+                <button onClick={() => handleAddToDonation()} style={{backgroundColor: text_btn_bg_color}} className='btn text-white  z-20 font-medium lg:font-semibold text-sm md:text-base lg:text-xl absolute bottom-0 md:bottom-4 lg:bottom-10 left-0  md:left-5 lg:left-10 border-none'>Donate ${price}</button>
                 </a>
+                <div className="z-10 h-14 md:h-20 lg:h-32 w-full hero-overlay bg-opacity-50 absolute bottom-0"></div>
             </div>
             <h2 className='my-5 text-4xl font-bold'>{title}</h2>
             <p className='text-lg font-normal'>{description}</p>

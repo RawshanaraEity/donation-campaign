@@ -26,7 +26,7 @@ const CategoryCard = ({ eachCategory }) => {
         <p className=" w-24 mb-3 rounded-md px-4 py-2 text-base font-medium" style={{backgroundColor: category_bg_color}}>
             {category}
           </p>
-          <h5 className="mb-2 block font-sans text-xl font-semibold leading-snug tracking-normal text-blue-gray-900 antialiased">
+          <h5 className="mb-2 block text-xl font-semibold leading-snug tracking-normal text-blue-gray-900 antialiased">
             {title}
           </h5>
           
