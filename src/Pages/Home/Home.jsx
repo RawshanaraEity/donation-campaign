@@ -6,8 +6,6 @@ import { useLoaderData } from 'react-router-dom';
 const Home = () => {
 
     const categories = useLoaderData()
-    
-
 
     return (
         <div>

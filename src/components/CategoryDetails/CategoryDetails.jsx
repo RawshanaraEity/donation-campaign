@@ -9,10 +9,10 @@ const CategoryDetails = () => {
 
     const {id} = useParams()
     const idInt = parseInt(id)
-    // console.log(typeof(idInt))
+   
     
     const categoryData = useLoaderData()
-//    console.log(categoryData)
+
 
    useEffect(() => {
 
@@ -21,7 +21,7 @@ const CategoryDetails = () => {
 
    }, [idInt,categoryData])
 
-//    console.log(categoryInfo)
+
 
     return (
         <div className='py-5'>
