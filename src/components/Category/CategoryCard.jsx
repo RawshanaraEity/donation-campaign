@@ -1,7 +1,8 @@
-import React from "react";
 import { Link } from "react-router-dom";
 
-const CategoryCard = ({ eachCategory }) => {
+const CategoryCard = ({eachCategory}) => {
+
+  
   const {
     id,
     picture,
@@ -10,7 +11,7 @@ const CategoryCard = ({ eachCategory }) => {
     category_bg_color,
     card_bg_color,
     text_btn_bg_color,
-  } = eachCategory || {};
+  } = eachCategory.props.category || {};
 
 
 
@@ -28,8 +29,7 @@ const CategoryCard = ({ eachCategory }) => {
           </p>
           <h5 className="mb-2 block text-xl font-semibold leading-snug tracking-normal text-blue-gray-900 antialiased">
             {title}
-          </h5>
-          
+          </h5> 
         </div>
       </div>
     </div>

@@ -1,7 +1,7 @@
-import React from 'react';
+
 import Banner from '../../Header/Banner/Banner';
 import { useLoaderData } from 'react-router-dom';
-import Categories from '../../components/Categories/Categories';
+
 
 const Home = () => {
 
@@ -11,8 +11,7 @@ const Home = () => {
 
     return (
         <div>
-            <Banner></Banner>
-            <Categories categories={categories}></Categories>
+            <Banner categories={categories}></Banner>
         </div>
     );
 };
