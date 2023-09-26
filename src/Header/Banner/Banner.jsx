@@ -30,7 +30,7 @@ const Banner = ({categories}) => {
     <div>
       <div
         className="hero min-h-[80vh]"
-        style={{ backgroundImage: "url(/public/img/bg.png)" }}
+        style={{ backgroundImage: "url(https://i.ibb.co/KxHQgSH/bg.png)" }}
       >
         <div className="hero-overlay bg-white bg-opacity-90"></div>
         <div className="hero-content text-center text-neutral-content">
